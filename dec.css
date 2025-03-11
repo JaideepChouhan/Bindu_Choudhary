@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #e1bee7);
+    color: #4a4a4a;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    color: #d81b60;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #7b1fa2;
+}
+
+.header-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Message Section */
+.message {
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d81b60;
+    font-size: 2em;
+}
+
+.message p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Balloons Animation */
+.balloons {
+    position: relative;
+    height: 100px;
+}
+
+.balloon {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: #f06292;
+    border-radius: 50%;
+    animation: float 4s infinite ease-in-out;
+}
+
+.balloon:nth-child(2) {
+    left: 50%;
+    background: #ab47bc;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    right: 30%;
+    background: #4fc3f7;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% { transform: translateY(100px); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(100px); }
+}
+
+/* Gallery Section */
+.gallery h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d81b60;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #7b1fa2;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+footer p {
+    font-size: 1em;
+    color: #4a4a4a;
+}
