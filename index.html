@@ -8,9 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mp3">
-    </audio>    
+    <audio id="bg-music" loop muted>
+    <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    document.addEventListener('click', () => {
+        const audio = document.getElementById('bg-music');
+        if (audio.paused) {
+            audio.muted = false; // Remove mute on click
+            audio.play().catch(error => console.log("Audio autoplay blocked:", error));
+        }
+    });
+</script>  
     <div class="container">
         <!-- Header Section -->
         <header>
@@ -45,6 +55,6 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="dec.js"></script>
 </body>
 </html>
